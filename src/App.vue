@@ -57,7 +57,10 @@ export default {
     border: 5px solid gray;
     display: flex;
   }
-
+  #content .input-block {
+    width: 70%;
+    padding: 0px;
+  }
   #content .input {
     border: 5px solid black;
     margin-right: auto;
@@ -65,6 +68,10 @@ export default {
   #content .answer {
     border: 5px solid black;
     margin-left: auto;
+    width: 25%;
+  }
+  #content .answer p {
+    text-align: center;
   }
 
   input[type=number]::-webkit-inner-spin-button {

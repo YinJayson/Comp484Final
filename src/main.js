@@ -11,5 +11,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
+  data: {showAnswer1: false},
   template: '<App/>'
 })
