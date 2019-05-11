@@ -3,16 +3,26 @@
     <h1>Algebra</h1>
     <div class="function-container">
       <div class="name">
-        <p><b>Point-Slope Form: Find m</b></p>
+        <p>
+          <b>Point-Slope Form: Find m</b>
+        </p>
       </div>
-      <div class=form>
+      <div class="form">
         <div class="input-block">
           <div class="formula">
-            <p><i>y = mx + b</i></p>
+            <p>
+              <i>y = mx + b</i>
+            </p>
           </div>
           <div class="input">
-            <div><p><input type="number" placeholder="y" v-model="y1"> = m<input type="number" placeholder="x" v-model="x1"> + <input type="number" placeholder="b" v-model="b1"></p></div>
-            <button v-on:click='calc1'>Calculate!</button>
+            <div>
+              <p>
+                <input type="number" placeholder="y" v-model="y1"> = m
+                <input type="number" placeholder="x" v-model="x1"> +
+                <input type="number" placeholder="b" v-model="b1">
+              </p>
+            </div>
+            <button v-on:click="calc1">Calculate!</button>
           </div>
         </div>
         <div class="answer">
@@ -24,24 +34,32 @@
 
     <div class="function-container">
       <div class="name">
-        <p><b>Function Name</b></p>
+        <p>
+          <b>Function Name</b>
+        </p>
       </div>
-      <div class=form>
+      <div class="form">
         <div class="input-block">
           <div class="formula">
-            <p><i>Formula</i></p>
+            <p>
+              <i>Formula</i>
+            </p>
           </div>
           <div class="input">
             <!--
               Change depending on formula
               For inputs, set v-model to the variable you want it to be
             -->
-            <div><p><input type="number" placeholder="y" v-model="y1"></p></div>
+            <div>
+              <p>
+                <input type="number" placeholder="y" v-model="y1">
+              </p>
+            </div>
             <!--
               Set v-on:click to the method you want to do
               Methods need to be implemented in the <script> tag below in the methods{} section
             -->
-            <button v-on:click='calc1'>Calculate!</button>
+            <button v-on:click="calc1">Calculate!</button>
           </div>
         </div>
         <div class="answer">
@@ -71,7 +89,7 @@ export default {
     };
   },
   methods: {
-    /* 
+    /*
      * Methods go here
      * For whatever reason, you will need to reference your variables as this.variable
      */
@@ -79,13 +97,11 @@ export default {
       if (this.y1 == null || this.x1 == null || this.b1 == null) {
         this.answer1 = "One or more fields not given";
         this.showAnswer1 = true;
-      }
-      else if (this.x == 0) {
+      } else if (this.x == 0) {
         this.answer1 = "m can be anything";
         this.showAnswer1 = true;
-      }
-      else {
-        this.answer1 = "m = " + (this.y1 - this.b1) / this.x1; 
+      } else {
+        this.answer1 = "m = " + (this.y1 - this.b1) / this.x1;
         this.showAnswer1 = true;
       }
     }
