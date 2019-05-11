@@ -4,9 +4,136 @@
     <div class="function-container">
       <div class="name">
         <p>
-          <b>Find the derivative</b>
+          <b>Find the derivative respect to x</b>
         </p>
       </div>
+      <div class="form">
+        <div class="input-block">
+          <div class="formula">
+            <p>
+              <i>d/dx</i>
+            </p>
+          </div>
+          <div class="input">
+            <div>
+              <p>
+                <input type="number" placeholder="x" v-model="x"> x
+              </p>
+            </div>
+            <buttom v-on:click="Calculus">Caclculate!</buttom>
+          </div>
+        </div>
+        <div class="answer">
+          <p>Answer</p>
+          <p v-show="showAnswer1">{{Answer}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="function-container">
+      <div class="name">
+        <p>
+          <b>Find the derivative respect to y</b>
+        </p>
+      </div>
+      <div class="form">
+        <div class="input-block">
+          <div class="formula">
+            <p>
+              <i>d/dy</i>
+            </p>
+          </div>
+          <div class="input">
+            <div>
+              <p>
+                <input type="number" placeholder="y" v-model="y"> y
+              </p>
+            </div>
+            <buttom v-on:click="Calculus">Caclculate!</buttom>
+          </div>
+        </div>
+        <div class="answer">
+          <p>Answer</p>
+          <p v-show="showAnswer1">{{Answer}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="function-container">
+      <div class="name">
+        <p>
+          <b>Evaluate the integral respect to x</b>
+        </p>
+      </div>
+      <div class="form">
+        <div class="input-block">
+          <div class="formula">
+            <p>
+              <i>dx</i>
+            </p>
+          </div>
+          <div class="input">
+            <div>
+              <p>
+                <input type="number" placeholder="x" v-model="x"> x
+              </p>
+            </div>
+            <buttom v-on:click="Calculus">Caclculate!</buttom>
+          </div>
+        </div>
+        <div class="answer">
+          <p>Answer</p>
+          <p v-show="showAnswer1">{{Answer}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="function-container">
+      <div class="name">
+        <p>
+          <b>Evaluate the integral respect to y</b>
+        </p>
+      </div>
+      <div class="form">
+        <div class="input-block">
+          <div class="formula">
+            <p>
+              <i>dy</i>
+            </p>
+          </div>
+          <div class="input">
+            <div>
+              <p>
+                <input type="number" placeholder="y" v-model="y"> y
+              </p>
+            </div>
+            <buttom v-on:click="Calculus">Caclculate!</buttom>
+          </div>
+        </div>
+        <div class="answer">
+          <p>Answer</p>
+          <p v-show="showAnswer1">{{Answer}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="codepad-input hide" style="display:block;">
+      <span
+        id="main-input"
+        class="mathquill mathquill-editable mathquill-rendered-math"
+        rel="tooktip"
+        title
+      >
+        <span class="textarea">
+          <textarea></textarea>
+        </span>
+        <big>&int;</big>
+        <sub class="limit empty" style="left: -0.25em;">::after</sub>
+        <sub class="limit empty" style="left:-0.5em; margin-right:-0.3375em;">::after</sub>
+        <span></span>
+        <var>d</var>
+        <var>x</var>
+      </span>
     </div>
   </div>
 </template>
