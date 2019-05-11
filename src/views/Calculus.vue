@@ -203,6 +203,7 @@ f.derivative(); // should return CalculusEquation("x", "-sin(x)");
 
 <style scoped>
 /* 
+ * testing testing testing
  * style scoped applies styling to this page only
  * If you want to change styling for the whole site, go to src/App.vue and go to the <style> tag
  */
