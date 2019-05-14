@@ -66,6 +66,28 @@
 
   <div class="function-container">
     <div class="name">
+      <p><b>Quadratic Formula: Find x</b></p>
+    </div>
+    <div class=form>
+      <div class="input-block">
+        <div class="formula">
+          <p><i><img src="@/assets/quadratic1.png"> and <img src="@/assets/quadratic2.png"></i></p>
+        </div>
+        <div class="input">
+          <div>
+            <p>a = <input type="number" placeholder="a" v-model="a4">&nbsp;&nbsp;&nbsp;b = <input type="number" placeholder="b" v-model="b4">&nbsp;&nbsp;&nbsp;c = <input type="number" placeholder="c" v-model="c4"></p>
+          </div>
+          <button v-on:click='calc4'>Calculate!</button>
+        </div>
+      </div>
+      <div class="answer">
+        <p>Answer</p>
+        <p v-show="showAnswer4">{{answer4}}</p>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="function-container">
+    <div class="name">
       <p><b>Function Name</b></p>
     </div>
     <div class=form>
@@ -77,12 +99,10 @@
           <!--
             Change depending on formula
             For inputs, set v-model to the variable you want it to be
-          -->
           <div><p><input type="number" placeholder="y" v-model="y1"></p></div>
           <!--
             Set v-on:click to the method you want to do
             Methods need to be implemented in the <script> tag below in the methods{} section
-          -->
           <button v-on:click='calc1'>Calculate!</button>
         </div>
       </div>
@@ -92,11 +112,10 @@
           v-show is for conditional rendering
           set v-show to a boolean or remove to show by default
           The {{}} brackets prints out the value of the variable in the brackets
-        -->
         <p v-show="showAnswer1">{{answer1}}</p>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
 </template>
 
@@ -110,18 +129,20 @@ export default {
       y1: null,
       x1: null,
       b1: null,
-
       answer2: null,
       showAnswer2: false,
       n2: null,
-
       answer3: null,
       showAnswer3: false,
       a3: null,
       b3: null,
       c3: null,
       d3: null,
-
+      a4: null,
+      b4: null,
+      c4: null,
+      answer4: null,
+      showAnswer4: false,
       temp1: null,
       temp2: null
     };
@@ -167,6 +188,19 @@ export default {
       }
       else {
         this.answer3 = "(" + this.a3 + " + " + this.b3 + ") x (" + this.c3 + " + " + this.d3 + ") = " + (this.a3 * this.c3 + this.a3 * this.d3 + this.b3 * this.c3 + this.b3 * this.d3);
+      }
+    },
+    calc4() {
+      this.showAnswer4 = true;
+      if(this.a4 == null || this.b4 == null || this.c4 == null) {
+        this.answer4 = "One or more fields not given";
+      }
+      else if (this.a4 == 0) {
+        this.answer4 = "a cannot be 0";
+      }
+      else {
+        this.answer4 = "x = " + ((-this.b4 + Math.sqrt(Math.pow(this.b4, 2) - (4 * this.a4 * this.c4))) / (2 * this.a4)) + " and " + 
+        "x = " + ((-this.b4 - Math.sqrt(Math.pow(this.b4, 2) - (4 * this.a4 * this.c4))) / (2 * this.a4));
       }
     }
   }
