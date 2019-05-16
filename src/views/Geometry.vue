@@ -103,7 +103,7 @@
         <div class="input">
           <div>
             <p>
-              r = <input type="number" placeholder="r" v-model="r1">
+              d = <input type="number" placeholder="d" v-model="d1">
             </p>
 
           </div>
@@ -164,9 +164,7 @@ export default {
         this.showAnswer1 = true;
       }
     },
-
 // SQUARE FUNCTION
-
     calc2() {
       if (this.s1 == null) {
         this.answer2 = "One field is not given";
@@ -181,9 +179,7 @@ export default {
         this.showAnswer2 = true;
       }
     },
-
 // TRIANGLE FUNCTION
-
     calc3() {
       if (this.a1 == null || this.b1 == null || this.c1 == null | this.h1 == null) {
         this.answer3 = "One or more fields are not given";
@@ -199,28 +195,23 @@ export default {
         this.showAnswer3 = true;
       }
     },
-
     calc4() {
-      if (this.r1 == null){
+      if (this.d1 == null){
         this.answer4 = "One field is not given.";
         this.showAnswer4 = true;
       }
-      else if (this.r1 < 0) {
+      else if (this.d1 < 0) {
         this.answer4 = "Negative is illegal! Shape cannot have negative number.";
         this.showAnswer4 = true;
       }
       else {
-        var ans = ((4/3)*(Math.PI)*(Math.pow(this.r1, 3)));
-        this.answer4 = "V = " + ans.toFixed(2);
+        var r = (this.d1/2);
+        var ans = ((4/3)*(Math.PI)*(Math.pow(r, 3)));
+        this.answer4 = "V = " + (Math.round(ans * 10) / 10);
         this.showAnswer4 = true;
       }
     }
-
-
   }
-
-
-
 };
 </script>
 
