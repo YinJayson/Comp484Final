@@ -3,7 +3,7 @@
     <h1>Algebra</h1>
     <div class="function-container">
       <div class="name">
-        <p>
+        <p id = "point-slope">
           <b>Point-Slope Form: Find m</b>
         </p>
       </div>
