@@ -34,44 +34,16 @@
 
     <div class="function-container">
       <div class="name">
-<<<<<<< HEAD
-        <p>
-          <b>Function Name</b>
-        </p>
-=======
         <p><b>Calculate Factorial</b></p>
->>>>>>> 22a50c35b9c59f2c85a6ce1e0bed8a250fe40306
       </div>
       <div class="form">
         <div class="input-block">
           <div class="formula">
-<<<<<<< HEAD
-            <p>
-              <i>Formula</i>
-            </p>
-          </div>
-          <div class="input">
-            <!--
-              Change depending on formula
-              For inputs, set v-model to the variable you want it to be
-            -->
-            <div>
-              <p>
-                <input type="number" placeholder="y" v-model="y1">
-              </p>
-            </div>
-            <!--
-              Set v-on:click to the method you want to do
-              Methods need to be implemented in the <script> tag below in the methods{} section
-            -->
-            <button v-on:click="calc1">Calculate!</button>
-=======
             <p><i>n! = n * (n-1) * (n-2) * ... * (1)</i></p>
           </div>
           <div class="input">
             <div><p><input type="number" placeholder="n" v-model="n2"> !</p></div>
             <button v-on:click='calc2'>Calculate!</button>
->>>>>>> 22a50c35b9c59f2c85a6ce1e0bed8a250fe40306
           </div>
         </div>
         <div class="answer">
@@ -194,15 +166,6 @@ export default {
       this.showAnswer1 = true;
       if (this.y1 == null || this.x1 == null || this.b1 == null) {
         this.answer1 = "One or more fields not given";
-<<<<<<< HEAD
-        this.showAnswer1 = true;
-      } else if (this.x == 0) {
-        this.answer1 = "m can be anything";
-        this.showAnswer1 = true;
-      } else {
-        this.answer1 = "m = " + (this.y1 - this.b1) / this.x1;
-        this.showAnswer1 = true;
-=======
       }
       else if (this.x == 0) {
         this.answer1 = "m can be anything";
@@ -248,7 +211,6 @@ export default {
       else {
         this.answer4 = "x = " + ((-this.b4 + Math.sqrt(Math.pow(this.b4, 2) - (4 * this.a4 * this.c4))) / (2 * this.a4)) + " and " + 
         "x = " + ((-this.b4 - Math.sqrt(Math.pow(this.b4, 2) - (4 * this.a4 * this.c4))) / (2 * this.a4));
->>>>>>> 22a50c35b9c59f2c85a6ce1e0bed8a250fe40306
       }
     }
   }
